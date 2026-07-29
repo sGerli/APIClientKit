@@ -1,0 +1,16 @@
+# Swift Package Index manifest
+# https://swiftpackageindex.com/swiftpackageindex/spimanifest/documentation/spimanifest/commonusecases
+
+version: 1
+builder:
+  configs:
+    - documentation_targets:
+        # First target is the documentation landing page.
+        - APIClientKit
+        - APIClientKitURLSession
+    - platform: ios
+    - platform: linux
+    - platform: watchos
+    - platform: tvos
+    - platform: visionos
+    - platform: android

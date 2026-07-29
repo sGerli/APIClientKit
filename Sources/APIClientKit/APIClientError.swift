@@ -1,0 +1,15 @@
+public enum APIClientError: Error {
+    case bodyEncodingError(Endpoint, Error)
+    case decodingError(Endpoint, Error)
+    case requestError(Endpoint, Error)
+    case serverError(Response)
+    case badRequest(Response)
+    case unprocessableEntity(Response)
+    case notFound(Response)
+    case forbidden(Response)
+    case unauthorized(Response)
+    case unknownStatusCode(Response)
+    case networkError(Endpoint, Error)
+    case endpointPathError(Endpoint, path: String)
+    case rateLimitExceeded(Response, retryAfterSeconds: Int)
+}
